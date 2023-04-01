@@ -4,7 +4,7 @@ const cors=require("cors");
 const path=require("path");
 const app=express();
 app.use(cors());
-app.use(express.static(path.join(__dirname),"./client/build"));
+app.use(express.static(path.join(__dirname,"./client/build")));
 app .get("/getEmployees",async (req,res)=>{
 let fetchedData= await employee.find();
 console.log(fetchedData);
